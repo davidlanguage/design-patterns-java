@@ -5,16 +5,16 @@ import java.time.LocalDate;
 //Abstract builder
 public interface UserDTOBuilder {
 	//methods to build "parts" of product at a time
-	UserDTOBuilder withFirstName(String fname) ;
+	UserDTOBuilder withFirstName(final String fname) ;
 
-	UserDTOBuilder withLastName(String lname);
+	UserDTOBuilder withLastName(final String lname);
 
-	UserDTOBuilder withBirthday(LocalDate date);
+	UserDTOBuilder withBirthday(final LocalDate date);
 
-	UserDTOBuilder withAddress(com.cpc.dp.builder.Address address);
+	UserDTOBuilder withAddress(final Address address);
 	//method to "assemble" final product
-	com.cpc.dp.builder.UserDTO build();
+	UserDTO build();
 	//(optional) method to fetch already built object
-	com.cpc.dp.builder.UserDTO getUserDTO();
+	UserDTO getUserDTO();
 }
 
