@@ -4,7 +4,7 @@ package org.example.creational_design_patterns.prototype;
 /**
  * This class represents an abstract prototype & defines the clone method
  */
-public abstract class GameUnit {
+public abstract class GameUnit implements Cloneable {
 	
 	private Point3D position;
 	
@@ -16,7 +16,7 @@ public abstract class GameUnit {
 		position = new Point3D(x, y, z);
 	}
 
-	public void move(Point3D direction, float distance) {
+	public void move(final Point3D direction, final float distance) {
 		Point3D finalMove = direction.normalize();
 		finalMove = finalMove.multiply(distance);
 		position = position.add(finalMove);
@@ -25,4 +25,18 @@ public abstract class GameUnit {
 	public Point3D getPosition() {
 		return position;
 	}
+
+	protected void initialize(){
+		this.position = Point3D.ZERO;
+		reset();
+	}
+
+	protected abstract void reset();
+
+    @Override
+    public GameUnit clone() throws CloneNotSupportedException {
+		final GameUnit unit = (GameUnit) super.clone();
+		unit.initialize();
+		return unit;
+    }
 }

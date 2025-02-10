@@ -21,11 +21,20 @@ public class Point3D {
 		return (float)Math.sqrt(x*x + y*y + z*z);
 	}
 	
-	public Point3D multiply(float scale) {
+	public Point3D multiply(final float scale) {
 		return new Point3D(x*scale, y*scale, z*scale);
 	}
 	
-	public Point3D add(Point3D vect) {
+	public Point3D add(final Point3D vect) {
 		return new Point3D(x+vect.x, y+vect.y, z+vect.z);
+	}
+
+	@Override
+	public String toString() {
+		return "Point3D{" +
+				"x=" + x +
+				", y=" + y +
+				", z=" + z +
+				'}';
 	}
 }
