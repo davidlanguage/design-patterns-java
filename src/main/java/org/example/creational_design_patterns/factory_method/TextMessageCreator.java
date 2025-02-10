@@ -1,7 +1,7 @@
 package org.example.creational_design_patterns.factory_method;
 
-import com.coffeepoweredcrew.factorymethod.message.Message;
-import com.coffeepoweredcrew.factorymethod.message.TextMessage;
+import org.example.creational_design_patterns.factory_method.message.Message;
+import org.example.creational_design_patterns.factory_method.message.TextMessage;
 
 /**
  * Provides implementation for creating Text messages
@@ -9,5 +9,8 @@ import com.coffeepoweredcrew.factorymethod.message.TextMessage;
 public class TextMessageCreator extends MessageCreator {
 
 
-
+    @Override
+    public Message createMessage() {
+        return new TextMessage();
+    }
 }
