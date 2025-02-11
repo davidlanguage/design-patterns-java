@@ -1,4 +1,4 @@
-package com.coffeepoweredcrew.singleton;
+package org.example.creational_design_patterns.singleton;
 
 /**
  * (Ref. Google I/O 2k8 Joshua Bloch)
@@ -6,5 +6,10 @@ package com.coffeepoweredcrew.singleton;
  * mechanism and still ensure single instance
  */
 public enum RegistryEnum {
-	
+
+    INSTANCE;
+
+    public void getConfiguration(){
+
+    }
 }
