@@ -1,7 +1,7 @@
 package org.example.creational_design_patterns.object_pool;
 
 //Represents our abstract reusable
-public interface Image{
+public interface Image extends Poolable{
 
     void draw();
 
