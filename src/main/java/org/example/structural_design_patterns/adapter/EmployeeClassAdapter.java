@@ -1,4 +1,4 @@
-package org.example.behavioral_design_patterns.adapter;
+package org.example.structural_design_patterns.adapter;
 
 /**
  * A class adapter, works as Two-way adapter
@@ -7,7 +7,7 @@ package org.example.behavioral_design_patterns.adapter;
  * Employee remains a POJO; EmployeeClassAdapter adapts the basic behavior of Employee without having to extend
  * the functionality of a regular POJO (open close)
  */
-public class EmployeeClassAdapter extends Employee implements Customer{
+public class EmployeeClassAdapter extends Employee implements Customer {
 
     @Override
     public String getName() {

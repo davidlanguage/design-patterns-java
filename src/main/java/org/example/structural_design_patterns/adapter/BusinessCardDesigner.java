@@ -1,4 +1,4 @@
-package org.example.behavioral_design_patterns.adapter;
+package org.example.structural_design_patterns.adapter;
 
 /**
  * Client code which requires Customer interface.

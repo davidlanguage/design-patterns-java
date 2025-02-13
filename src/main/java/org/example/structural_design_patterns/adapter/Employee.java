@@ -1,4 +1,4 @@
-package org.example.behavioral_design_patterns.adapter;
+package org.example.structural_design_patterns.adapter;
 
 /**
  * An existing class used in our system
