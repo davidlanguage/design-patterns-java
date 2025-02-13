@@ -2,6 +2,7 @@ package org.example.behavioral_design_patterns.adapter;
 
 /**
  * An existing class used in our system
+ * This is the adaptee
  */
 public class Employee {
 

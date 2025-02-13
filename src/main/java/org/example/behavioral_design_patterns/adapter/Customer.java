@@ -2,6 +2,7 @@ package org.example.behavioral_design_patterns.adapter;
 
 /**
  * Target interface required by new client code
+ * Target Interface
  */
 public interface Customer {
 

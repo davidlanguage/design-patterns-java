@@ -4,8 +4,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		/** Using Class/Two-way adapter **/ 
-		
-		
+		EmployeeClassAdapter employeeClassAdapter = new EmployeeClassAdapter();
+
+		//This is a two way adapter
+		//adaptee is expected, and we are passing the adapter
+		populateEmployeeData(employeeClassAdapter);
+
+		BusinessCardDesigner designer = new BusinessCardDesigner();
+
+		String card = designer.designCard(employeeClassAdapter);
+
+		System.out.println(card);
+
 		/** Using Object Adapter **/
 		
 	}
