@@ -1,7 +1,5 @@
 package org.example.structural_design_patterns.facade.email;
 
-import com.coffeepoweredcrew.facade.email.Template.TemplateType;
-
 public class TemplateFactory {
 
 	public static Template createTemplateFor(TemplateType type) {
