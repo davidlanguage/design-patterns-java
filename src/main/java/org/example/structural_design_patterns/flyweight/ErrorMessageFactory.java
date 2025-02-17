@@ -1,5 +1,8 @@
 package org.example.structural_design_patterns.flyweight;
 
+import java.util.HashMap;
+import java.util.Map;
+
 //Flyweight factory. Returns shared flyweight based on key
 public class ErrorMessageFactory {
 	
@@ -11,11 +14,24 @@ public class ErrorMessageFactory {
 	public static ErrorMessageFactory getInstance() {
 		return FACTORY;
 	}
-	
+
+	private Map<ErrorType, SystemErrorMessage> errorMessages = new HashMap<>();
+
 	private ErrorMessageFactory() {
-		
+		errorMessages.put(ErrorType.GenericSystemError,
+				new SystemErrorMessage("A generic error of type $errorCode occurred. Please refer to:\n",
+						"http://google.com/q="));
+		errorMessages.put(ErrorType.PageNotFoundError,
+				new SystemErrorMessage("Page not found. An error of type $errorCode occurred. Please refer to:\n",
+						"http://google.com/q="));
+		errorMessages.put(ErrorType.ServerError,
+				new SystemErrorMessage("Server Error. An error of type $errorCode occurred. Please refer to:\n",
+						"http://google.com/q="));
 	}
-	
+
+	public SystemErrorMessage getError(final ErrorType errorType){
+		return errorMessages.get(errorType);
+	}
 	
 	public UserBannedErrorMessage getUserBannedMessage(String caseId) {
 		return new UserBannedErrorMessage(caseId);
