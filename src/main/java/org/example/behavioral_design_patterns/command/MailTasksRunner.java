@@ -47,7 +47,7 @@ public class MailTasksRunner implements Runnable {
 			}
 			if (cmd == null)
 				return;
-			//cmd.execute();
+			cmd.execute();
 		}
 
 	}
