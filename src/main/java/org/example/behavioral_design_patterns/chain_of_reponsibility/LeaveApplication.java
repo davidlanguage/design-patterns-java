@@ -52,7 +52,7 @@ public class LeaveApplication {
 	}
 
 	public void reject(String approverName) {
-		this.status = Status.Rejecetd;
+		this.status = Status.Rejected;
 		this.processedBy = approverName;
 	}
 	
