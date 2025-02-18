@@ -1,14 +1,14 @@
 package org.example.behavioral_design_patterns.chain_of_reponsibility;
 //A concrete handler
 
-/*public class Manager extends Employee {
+public class Manager extends Employee {
 
-	public Manager(LeaveApprover nextApprover) {
-		super("Manager", nextApprover);
+	public Manager(final LeaveApprover nextApprover) {
+		super(Role.MANAGER.getRoleName(), nextApprover);
 	}
-	
+
 	@Override
-	protected boolean processRequest(LeaveApplication application) {
+	protected boolean processRequest(final LeaveApplication application) {
 		switch (application.getType()) {
 		case Sick:
 			application.approve(getApproverRole());
@@ -21,5 +21,5 @@ package org.example.behavioral_design_patterns.chain_of_reponsibility;
 		}
 		return false;
 	}
-	
-}*/
+
+}

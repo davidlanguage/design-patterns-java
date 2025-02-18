@@ -5,10 +5,6 @@ import java.time.Period;
 //Represents a request in our chain of responsibility
 public class LeaveApplication {
 	
-	public enum Type {Sick, PTO, LOP};
-	
-	public enum Status {Pending, Approved, Rejecetd };
-	
 	private Type type;
 	
 	private LocalDate from;
@@ -19,7 +15,7 @@ public class LeaveApplication {
 
 	private Status status;
 	
-	public LeaveApplication(Type type, LocalDate from, LocalDate to) {
+	public LeaveApplication(final Type type, final LocalDate from, final LocalDate to) {
 		this.type = type;
 		this.from = from;
 		this.to = to;

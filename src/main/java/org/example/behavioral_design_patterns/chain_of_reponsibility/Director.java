@@ -1,20 +1,20 @@
 package org.example.behavioral_design_patterns.chain_of_reponsibility;
 
-import com.coffeepoweredcrew.chainofresponsibility.LeaveApplication.Type;
-//A concrete handler
-/*public class Director extends Employee {
 
-	public Director(LeaveApprover nextApprover) {
-		super("Director", nextApprover);
+//A concrete handler
+public class Director extends Employee {
+
+	public Director(final LeaveApprover nextApprover) {
+		super(Role.DIRECTOR.getRoleName(), nextApprover);
 	}
 	
 	@Override
 	protected boolean processRequest(LeaveApplication application) {
-		if(application.getType() == Type.PTO) {
+		if(application.getType() == Type.LOP) {
 			application.approve(getApproverRole());
 			return true;
 		}
 		return false;
 	}
 	
-}*/
+}
