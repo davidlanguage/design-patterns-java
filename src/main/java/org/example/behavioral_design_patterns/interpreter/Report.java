@@ -6,7 +6,7 @@ public class Report {
 	//"NOT ADMIN", "FINANCE_USER AND ADMIN"
 	private String permission;
 	
-	public Report(String name, String permissions) {
+	public Report(final String name, final String permissions) {
 		this.name = name;
 		this.permission = permissions;
 	}

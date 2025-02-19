@@ -10,7 +10,7 @@ public class User {
 	
 	private String username;
 	
-	public User(String username, String... permissions) {
+	public User(final String username, final String... permissions) {
 		this.username = username;
 		this.permissions = new ArrayList<>();
 		Stream.of(permissions).forEach(e->this.permissions.add(e.toLowerCase()));
