@@ -1,16 +1,16 @@
 package org.example.behavioral_design_patterns.memento;
 
-import com.coffeepoweredcrew.memento.command.AddStepCommand;
-import com.coffeepoweredcrew.memento.command.CreateCommand;
-import com.coffeepoweredcrew.memento.command.WorkflowCommand;
+import org.example.behavioral_design_patterns.memento.command.AddStepCommand;
+import org.example.behavioral_design_patterns.memento.command.CreateCommand;
+import org.example.behavioral_design_patterns.memento.command.WorkflowCommand;
 
 import java.util.LinkedList;
 
 public class Client {
 
     public static void main(String[] args) {
-        WorkflowDesigner designer = new WorkflowDesigner();
-        LinkedList<WorkflowCommand> commands = runCommands(designer);
+        final WorkflowDesigner designer = new WorkflowDesigner();
+        final LinkedList<WorkflowCommand> commands = runCommands(designer);
         designer.print();
         undoLastCommand(commands);
         designer.print();
@@ -24,13 +24,13 @@ public class Client {
         designer.print();
     }
 
-    private static void undoLastCommand(LinkedList<WorkflowCommand> commands) {
+    private static void undoLastCommand(final LinkedList<WorkflowCommand> commands) {
         if(!commands.isEmpty())
             commands.removeLast().undo();
     }
 
-    private static LinkedList<WorkflowCommand> runCommands(WorkflowDesigner designer) {
-        LinkedList<WorkflowCommand> commands = new LinkedList<>();
+    private static LinkedList<WorkflowCommand> runCommands(final WorkflowDesigner designer) {
+        final LinkedList<WorkflowCommand> commands = new LinkedList<>();
 
         WorkflowCommand cmd = new CreateCommand(designer,"Leave Workflow");
         commands.addLast(cmd);

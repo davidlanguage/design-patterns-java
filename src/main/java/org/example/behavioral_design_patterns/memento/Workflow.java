@@ -9,12 +9,12 @@ public class Workflow {
 	
 	private String name;
 	
-	public Workflow(String name) {
+	public Workflow(final String name) {
 		this.name = name;
 		this.steps = new LinkedList<>();
 	}
 	
-	public Workflow(String name, String... steps) {
+	public Workflow(final String name, final String... steps) {
 		this.name = name;
 		this.steps = new LinkedList<>();
 		if(steps != null && steps.length > 0) {
@@ -24,20 +24,20 @@ public class Workflow {
 
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder("Workflow [name=");
+		final StringBuilder builder = new StringBuilder("Workflow [name=");
 		builder.append(name).append("]\nBEGIN -> ");
-		for(String step : steps) {
+		for(final String step : steps) {
 			builder.append(step).append(" -> ");
 		}
 		builder.append("END");
 		return builder.toString();
 	}
 	
-	public void addStep(String step) {
+	public void addStep(final String step) {
 		steps.addLast(step);
 	}
 	
-	public boolean removeStep(String step) {
+	public boolean removeStep(final String step) {
 		return steps.remove(step);
 	}
 

@@ -6,7 +6,7 @@ public class RemoveStepCommand extends AbstractWorkflowCommand {
 
     private String step;
 
-    public RemoveStepCommand(WorkflowDesigner designer, String step) {
+    public RemoveStepCommand(final WorkflowDesigner designer, final String step) {
         super(designer);
         this.step = step;
     }

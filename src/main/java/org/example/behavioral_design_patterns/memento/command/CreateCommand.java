@@ -6,7 +6,7 @@ public class CreateCommand extends AbstractWorkflowCommand {
 
     private String name;
 
-    public CreateCommand(WorkflowDesigner designer, String name) {
+    public CreateCommand(final WorkflowDesigner designer, final String name) {
         super(designer);
         this.name = name;
     }

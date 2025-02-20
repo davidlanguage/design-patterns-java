@@ -6,7 +6,7 @@ public class AddStepCommand extends AbstractWorkflowCommand {
 
     private String step;
 
-    public AddStepCommand(WorkflowDesigner designer, String step) {
+    public AddStepCommand(final WorkflowDesigner designer, final String step) {
         super(designer);
         this.step = step;
     }
