@@ -1,7 +1,7 @@
 package org.example.behavioral_design_patterns.observer;
 
 public class Client {
-    
+
     public static void main(String[] args) {
         final Order order = new Order("100");
         final PriceObserver priceObserver = new PriceObserver();
