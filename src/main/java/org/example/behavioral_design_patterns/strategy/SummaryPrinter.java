@@ -1,7 +1,22 @@
 package org.example.behavioral_design_patterns.strategy;
 
-//Concrete strategy
-public class SummaryPrinter {
+import java.util.Collection;
+import java.util.Iterator;
 
-	
+//Concrete strategy
+public class SummaryPrinter implements OrderPrinter{
+
+    @Override
+    public void print(final Collection<Order> orders) {
+        System.out.println("************** Summary Report **************");
+        final Iterator<Order> iterator = orders.iterator();
+        double total = 0;
+        for (int i=1; iterator.hasNext();i++){
+            final Order order = iterator.next();
+            System.out.println(i + ". "+order.getId()+"\t"+order.getDate()+"\t"+order.getItems().size()+"\t"+order.getTotal());
+            total +=order.getTotal();
+        }
+        System.out.println("*****************************************************************");
+        System.out.println("\t\t\tTotal " + total);
+    }
 }

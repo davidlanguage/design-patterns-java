@@ -6,11 +6,14 @@ import java.util.LinkedList;
 //Context 
 public class PrintService {
 
-    public PrintService() {
-        
+    private OrderPrinter printer;
+
+    //User to decide which type of order they want (SummaryPrinter or DetailPrinter)
+    public PrintService(final OrderPrinter printer) {
+        this.printer = printer;
     }
 
-    public void printOrders(LinkedList<Order> orders) {
-        
+    public void printOrders(final LinkedList<Order> orders) {
+        printer.print(orders);
     }
 }
