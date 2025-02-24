@@ -4,7 +4,7 @@ public class Report {
 
 	private String name;
 	
-	public Report(String name) {
+	public Report(final String name) {
 		this.name = name;
 	}
 	

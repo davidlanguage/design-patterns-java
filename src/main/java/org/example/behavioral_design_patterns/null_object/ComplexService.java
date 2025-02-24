@@ -6,12 +6,12 @@ public class ComplexService {
 	
 	private String reportName;
 	
-	public ComplexService(StorageService storage) {
+	public ComplexService(final StorageService storage) {
 		this.storage = storage;
 		reportName = "A Complex Report";
 	}
 	
-	public ComplexService(String reportName, StorageService storage) {
+	public ComplexService(final String reportName, final StorageService storage) {
 		this.storage = storage;
 		this.reportName = reportName;
 	}
@@ -21,7 +21,7 @@ public class ComplexService {
 		
 		try {
 			Thread.sleep(3000);
-		} catch (InterruptedException e) {
+		} catch (final InterruptedException e) {
 			e.printStackTrace();
 		}
 		
