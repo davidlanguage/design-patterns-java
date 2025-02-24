@@ -14,7 +14,7 @@ public class Order {
 
     private double total;
 
-    public Order(String id) {
+    public Order(final String id) {
         this.id = id;
         date = LocalDate.now();
     }
@@ -31,7 +31,7 @@ public class Order {
         return items;
     }
 
-    public void addItem(String name, double price) {
+    public void addItem(final String name, final double price) {
         items.put(name, price);
         total+= price;
     }
