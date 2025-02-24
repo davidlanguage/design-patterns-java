@@ -9,7 +9,7 @@ public class Manager extends AbstractEmployee {
 	
 	private List<Employee> directReports = new ArrayList<>();
 
-	public Manager(String name,Employee...employees) {
+	public Manager(final String name,final Employee...employees) {
 		super(name);
 		Arrays.stream(employees).forEach(directReports::add);
 	}
@@ -19,5 +19,15 @@ public class Manager extends AbstractEmployee {
 		return directReports;
 	}
 
-	
+	@Override
+	public void accept(final Visitor visitor) {
+		visitor.visit(this);
+	}
+
+	@Override
+	public String toString() {
+		return "Manager{" +
+				"directReports=" + directReports +
+				'}';
+	}
 }

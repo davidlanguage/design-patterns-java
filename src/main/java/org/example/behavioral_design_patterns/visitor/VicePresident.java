@@ -9,7 +9,7 @@ public class VicePresident extends AbstractEmployee{
 
 	private List<Employee> directReports = new ArrayList<>();
 
-	public VicePresident(String name, Employee...employees) {
+	public VicePresident(final String name, final Employee...employees) {
 		super(name);
 		Arrays.stream(employees).forEach(directReports::add);
 	}
@@ -19,4 +19,15 @@ public class VicePresident extends AbstractEmployee{
 		return directReports;
 	}
 
+	@Override
+	public void accept(final Visitor visitor) {
+		visitor.visit(this);
+	}
+
+	@Override
+	public String toString() {
+		return "VicePresident{" +
+				"directReports=" + directReports +
+				'}';
+	}
 }

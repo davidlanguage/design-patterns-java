@@ -13,7 +13,7 @@ public abstract class AbstractEmployee implements Employee {
 	
 	private int employeeId;
 	
-	public AbstractEmployee(String name) {
+	public AbstractEmployee(final String name) {
 		this.name = name;
 		employeeId = employeeIdCounter++;
 	}
@@ -28,7 +28,7 @@ public abstract class AbstractEmployee implements Employee {
 	}
 
 	@Override
-	public void setPerformanceRating(int rating) {
+	public void setPerformanceRating(final int rating) {
 		performanceRating = rating;
 	}
 

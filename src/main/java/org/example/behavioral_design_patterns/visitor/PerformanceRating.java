@@ -10,7 +10,7 @@ public class PerformanceRating {
 	
 	private int finalRating;
 
-	public PerformanceRating(int id, int personalRating) {
+	public PerformanceRating(final int id, final int personalRating) {
 		this.id = id;
 		this.personalRating = personalRating;
 	}
@@ -31,11 +31,11 @@ public class PerformanceRating {
 		return finalRating;
 	}
 
-	public void setTeamAverageRating(int teamAverageRating) {
+	public void setTeamAverageRating(final int teamAverageRating) {
 		this.teamAverageRating = teamAverageRating;
 	}
 
-	public void setFinalRating(int finalRating) {
+	public void setFinalRating(final int finalRating) {
 		this.finalRating = finalRating;
 	}
 	
